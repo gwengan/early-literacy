@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phonological Awareness — Clinician & Parent Reference</title>
+<title>Sound to Print: Early Literacy Foundations — Clinician & Parent Reference</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -83,6 +83,7 @@ body.parent-mode .parent-only{display:block!important}
 
 /* TAGS */
 .tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;margin:2px 2px 2px 0;letter-spacing:.02em}
+.tag-meta{display:inline-block;font-size:10px;font-weight:400;padding:1px 0;margin-right:12px;letter-spacing:.01em;color:var(--ink3)}
 .t-pa{background:var(--pa-l);color:var(--pa)}
 .t-ph{background:var(--ph-l);color:var(--ph)}
 .t-pi{background:var(--pi-l);color:var(--pi)}
@@ -112,7 +113,7 @@ body.parent-mode .parent-only{display:block!important}
 .norm-pills{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 6px}
 .np-uk{background:var(--pi-l);color:var(--pi);font-size:11px;font-weight:500;padding:2px 9px;border-radius:20px}
 .np-au{background:var(--ph-l);color:var(--ph);font-size:11px;font-weight:500;padding:2px 9px;border-radius:20px}
-.src-note{font-size:11px;color:var(--ink3);font-style:italic;margin-top:4px}
+.src-note{font-size:10px;color:var(--ink3);font-style:italic;margin-top:4px;opacity:0.75}
 .phon-entry{border-left:3px solid var(--ph-m);padding-left:16px;margin:4px 0 4px 14px}
 .phon-entry-label{font-size:11px;font-weight:600;color:var(--ph);letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;padding-top:8px}
 
@@ -145,7 +146,7 @@ body.parent-mode .parent-only{display:block!important}
 .int-card p{font-size:12px;color:var(--ink2);line-height:1.6;margin-bottom:8px}
 .int-card ul{list-style:none;padding:0}
 .int-card ul li{font-size:12px;color:var(--ink2);padding:3px 0 3px 14px;position:relative;line-height:1.5}
-.int-card ul li::before{content:'&#8594;';position:absolute;left:0;color:var(--ink3)}
+.int-card ul li::before{content:'\2192';position:absolute;left:0;color:var(--ink3)}
 
 /* DIAGRAM */
 .diagram-wrap{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin-bottom:16px;overflow:hidden}
@@ -188,6 +189,21 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 /* FOOTER */
 .footer{margin-top:40px;padding:20px;border-top:1px solid var(--line);font-size:11px;color:var(--ink3);line-height:1.8;max-width:960px;margin-left:auto;margin-right:auto}
 
+/* SOURCES DROPDOWN */
+.src-details{cursor:pointer}
+.src-summary{font-size:11px;font-weight:600;color:var(--ink3);letter-spacing:.04em;list-style:none;display:flex;align-items:center;gap:6px;user-select:none;cursor:pointer}
+.src-summary::-webkit-details-marker{display:none}
+.src-chevron{width:13px;height:13px;color:var(--ink3);flex-shrink:0;transition:transform .2s ease;transform:rotate(0deg)}
+.src-details[open] .src-chevron{transform:rotate(90deg)}
+.src-body{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.src-col{display:flex;flex-direction:column;gap:0}
+.src-group{display:flex;flex-direction:column;gap:6px;padding-bottom:16px}
+.src-group:last-child{padding-bottom:0}
+.src-group-label{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);padding-bottom:4px;border-bottom:1px solid var(--line);margin-bottom:2px}
+.src-item{font-size:10.5px;color:var(--ink3);line-height:1.7}
+.src-note-inline{font-size:10px;color:var(--ink3);font-style:italic;opacity:.75;line-height:1.5}
+@media(max-width:620px){.src-body{grid-template-columns:1fr}}
+
 /* RESPONSIVE */
 @media(max-width:620px){
   .g2,.g3{grid-template-columns:1fr}
@@ -212,20 +228,14 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 
 <!-- HEADER -->
 <div class="hdr">
-  <div class="hdr-eyebrow slp-only">Speech Pathology Reference</div>
+  <div class="hdr-eyebrow slp-only">Speech Pathology Clinical Reference</div>
   <div class="hdr-eyebrow parent-only" style="color:#F5C49A">For Parents &amp; Families</div>
-  <h1>Phonological Awareness,<br><em>Phonemic Awareness</em> &amp; Phonics</h1>
-  <p class="hdr-sub slp-only">An evidence-based reference for SLPs. Age norms from Dodd &amp; Gillon (2001) Table 2, reporting PIPA Australian and UK normative data.</p>
+  <h1>Sound to Print:<br><em>Early Literacy Foundations</em></h1>
+  <p class="hdr-sub slp-only">An evidence-based reference for speech pathologists covering the full continuum from phonological awareness through phonemic awareness to phonics. Age norms from Dodd &amp; Gillon (2001) Table 2, PIPA Australian and UK normative data.</p>
   <p class="hdr-sub parent-only">A plain-language guide to understanding how children learn the sounds of language — and how this connects to reading and spelling.</p>
   <div class="hdr-pills slp-only">
-    <span class="hdr-pill">&#10003; Sources verified</span>
-    <span class="hdr-pill">&#10003; AU &amp; UK norms distinguished</span>
-    <span class="hdr-pill">&#10003; Assessment tools verified</span>
   </div>
   <div class="hdr-pills parent-only">
-    <span class="hdr-pill">&#10003; Plain language</span>
-    <span class="hdr-pill">&#10003; Real examples</span>
-    <span class="hdr-pill">&#10003; What to expect at each age</span>
   </div>
 </div>
 
@@ -262,20 +272,24 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 
 <!-- SLP -->
 <div class="slp-only">
-<p style="color:var(--ink2);font-size:13px;margin-bottom:20px;max-width:680px;line-height:1.7">These concepts are <strong>nested</strong> &#8212; each inner level is a subset of the one outside it. Phonics sits alongside (not inside) phonological awareness: it adds <em>print</em> to what is otherwise a purely auditory skill set.</p>
+<p style="color:var(--ink2);font-size:13px;margin-bottom:20px;max-width:680px;line-height:1.7">These concepts are <strong>nested</strong> &#8212; each inner level is a subset of the one outside it. Phonological awareness spans a continuum from least to most complex (Chard &amp; Dickson, 1999): rhyming and sentence segmentation &#8594; syllables &#8594; onset&#8211;rime &#8594; phonemes. Phonemic awareness is the phoneme-level subset of phonological awareness. Phonics sits alongside (not inside) phonological awareness: it adds <em>print</em> to what is otherwise a purely auditory skill set.</p>
 
 <div class="diagram-wrap" style="margin-bottom:16px">
 <svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;margin:0 auto">
   <rect x="0" y="0" width="680" height="340" rx="16" fill="#F7F4EF"/>
   <rect x="10" y="10" width="460" height="320" rx="14" fill="#EEE9FF" stroke="#C4BBF7" stroke-width="2"/>
   <text x="30" y="38" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#5B4FCF" letter-spacing="0.5">PHONOLOGICAL AWARENESS</text>
-  <text x="30" y="54" font-family="DM Sans,sans-serif" font-size="10" fill="#7A70C0">Spoken language only</text>
-  <rect x="24" y="64" width="90" height="22" rx="6" fill="#C4BBF7"/>
-  <text x="69" y="79" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="600" fill="#3A318A">Word level</text>
-  <rect x="122" y="64" width="90" height="22" rx="6" fill="#C4BBF7"/>
-  <text x="167" y="79" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="600" fill="#3A318A">Syllable level</text>
-  <rect x="220" y="64" width="100" height="22" rx="6" fill="#C4BBF7"/>
-  <text x="270" y="79" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="600" fill="#3A318A">Onset&#8211;rime level</text>
+  <text x="30" y="54" font-family="DM Sans,sans-serif" font-size="10" fill="#7A70C0">Spoken language only &#8212; least to most complex (Chard &amp; Dickson, 1999)</text>
+  <rect x="24" y="60" width="92" height="26" rx="6" fill="#C4BBF7"/>
+  <text x="70" y="71" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="600" fill="#3A318A">
+    <tspan x="70" dy="0">Rhyme &amp;</tspan><tspan x="70" dy="11">alliteration</tspan>
+  </text>
+  <rect x="122" y="60" width="76" height="26" rx="6" fill="#C4BBF7"/>
+  <text x="160" y="77" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="600" fill="#3A318A">Syllable level</text>
+  <rect x="204" y="60" width="84" height="26" rx="6" fill="#C4BBF7"/>
+  <text x="246" y="77" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="600" fill="#3A318A">Onset&#8211;rime level</text>
+  <rect x="294" y="60" width="92" height="26" rx="6" fill="#9B8FE8"/>
+  <text x="340" y="77" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" font-weight="600" fill="#1A0A6E">&#8594; Phoneme level</text>
   <rect x="20" y="98" width="440" height="220" rx="12" fill="#DFF5EF" stroke="#7DD4BC" stroke-width="2"/>
   <text x="38" y="122" font-family="DM Sans,sans-serif" font-size="11" font-weight="700" fill="#0F826A">PHONEMIC AWARENESS</text>
   <text x="38" y="138" font-family="DM Sans,sans-serif" font-size="10" fill="#0A6050">Individual sound (phoneme) level &#8212; the literacy driver</text>
@@ -317,21 +331,20 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
   <text x="577" y="294" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#6A6860">Sub-skill of phonics</text>
   <text x="577" y="310" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#6A6860">&#8220;b&#8221; = /b/</text>
   <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#C4BBF7"/></marker></defs>
-  <path d="M472 130 Q478 130 483 130" stroke="#C4BBF7" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arr)"/>
-  <text x="467" y="118" font-family="DM Sans,sans-serif" font-size="9" fill="#8A8780" text-anchor="end">prereq.</text>
 </svg>
 <p class="diagram-caption">Nested model. Each inner layer is a subset of the one outside it. Phonics and Letter&#8211;Sound Knowledge sit alongside &#8212; they require phonemic awareness plus print.</p>
 </div>
 
 <div class="g2" style="margin-bottom:16px">
-  <div class="cc pa">
+    <div class="cc pa">
     <div class="cc-title" style="color:var(--pa)">Phonological Awareness</div>
     <div class="cc-sub">Ears only &#8212; no letters</div>
-    <p class="cc-body">Awareness of sound structure across multiple grain sizes: word, syllable, onset&#8211;rime, and phoneme levels. Skills develop in overlapping phases.</p>
-    <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text"><strong>Word level</strong> <span class="dim">&#8212; words within sentences (precursor)</span></div></div>
+    <p class="cc-body">Awareness of the sound structure of spoken language across multiple grain sizes. Skills develop in overlapping phases from least to most complex (Chard &amp; Dickson, 1999). Rhyming and sentence segmentation are the <em>entry point</em> &#8212; not an afterthought.</p>
+    <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text"><strong>Rhyme &amp; alliteration</strong> <span class="dim">&#8212; least complex; word-level onset awareness</span></div></div>
+    <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text"><strong>Sentence segmentation</strong> <span class="dim">&#8212; words within sentences (precursor)</span></div></div>
     <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text"><strong>Syllable level</strong> <span class="dim">&#8212; segment, blend, count, delete</span></div></div>
     <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text"><strong>Onset&#8211;rime</strong> <span class="dim">&#8212; &#8220;cat&#8221; &#8594; /k/ + /&#230;t/</span></div></div>
-    <div class="skill-row"><div class="skill-dot" style="background:var(--pa)"></div><div class="skill-text"><strong>Phoneme level</strong> <span class="dim">&#8212; finest grain; literacy driver</span></div></div>
+    <div class="skill-row"><div class="skill-dot" style="background:var(--pa)"></div><div class="skill-text"><strong>Phoneme level (= phonemic awareness)</strong> <span class="dim">&#8212; finest grain; literacy driver</span></div></div>
   </div>
   <div style="display:flex;flex-direction:column;gap:12px">
     <div class="cc ls" style="flex:1">
@@ -343,12 +356,12 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
       <div class="cc-title" style="color:var(--pi)">Phonics</div>
       <div class="cc-sub">Print + sound</div>
       <p class="cc-body">Maps graphemes &#8596; phonemes. Requires phonemic awareness <em>plus</em> letter&#8211;sound knowledge.</p>
-      <span class="tag t-pi">Decoding</span><span class="tag t-pi">Encoding / spelling</span>
+      <p style="font-size:11px;color:var(--ink3);margin-top:4px">Decoding (print &#8594; sound) &nbsp;·&nbsp; Encoding / spelling (sound &#8594; print)</p>
     </div>
   </div>
 </div>
 <div class="callout c-mute">
-  <strong>Key distinction:</strong> Phonological and phonemic awareness are <em>ears only</em> &#8212; no letters. The moment a letter card appears, you&#8217;ve moved into letter&#8211;sound or phonics territory. While PA is definitionally auditory, integrating letters once letter learning is underway produces stronger literacy outcomes than either in isolation (Ehri et al. 2001; Boyer &amp; Ehri 2011).
+  <strong>Key distinction:</strong> Phonological and phonemic awareness are <em>ears only</em> &#8212; no letters. The moment a letter card appears, you&#8217;ve moved into letter&#8211;sound or phonics territory. Rhyming and alliteration are the least complex end of phonological awareness &#8212; they belong inside the PA umbrella, not outside it (Chard &amp; Dickson, 1999). While PA is definitionally auditory, integrating letters once letter learning is underway produces stronger literacy outcomes than either in isolation (Ehri et al. 2001; Boyer &amp; Ehri 2011).
 </div>
 </div>
 
@@ -362,7 +375,7 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
   <rect x="10" y="10" width="340" height="280" rx="14" fill="#EEE9FF" stroke="#C4BBF7" stroke-width="2"/>
   <text x="30" y="36" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" fill="#5B4FCF">SOUND AWARENESS</text>
   <text x="30" y="52" font-family="DM Sans,sans-serif" font-size="10" fill="#7A70C0">(Phonological Awareness)</text>
-  <text x="30" y="68" font-family="DM Sans,sans-serif" font-size="9.5" fill="#7A70C0">Hearing sounds in spoken words</text>
+  <text x="30" y="68" font-family="DM Sans,sans-serif" font-size="9.5" fill="#7A70C0">Rhyming, alliteration, syllables, onset&#8211;rime &amp; individual sounds</text>
   <rect x="22" y="84" width="316" height="192" rx="12" fill="#DFF5EF" stroke="#7DD4BC" stroke-width="2"/>
   <text x="38" y="106" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" fill="#0F826A">INDIVIDUAL SOUNDS</text>
   <text x="38" y="122" font-family="DM Sans,sans-serif" font-size="10" fill="#0A6050">(Phonemic Awareness)</text>
@@ -393,9 +406,10 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
   <div class="cc pa">
     <div class="cc-title" style="color:var(--pa)">Sound Awareness</div>
     <div class="cc-sub">Listening only &#8212; no reading</div>
-    <p class="cc-body">Your child&#8217;s ability to hear and play with the sounds in spoken words &#8212; before they learn to read. This is a purely listening skill. No letters involved.</p>
+    <p class="cc-body">Your child&#8217;s ability to hear and play with the sounds in spoken words &#8212; before they learn to read. This is a purely listening skill. No letters involved. It starts simple and builds in complexity.</p>
+    <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Rhyming &#8212; &#8220;cat&#8221; and &#8220;hat&#8221; sound the same at the end</div></div>
+    <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Alliteration &#8212; &#8220;ball, bat, bin&#8221; all start with /b/</div></div>
     <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Clapping syllables in &#8220;but-ter-fly&#8221;</div></div>
-    <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Knowing &#8220;cat&#8221; and &#8220;hat&#8221; rhyme</div></div>
     <div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Hearing sounds in &#8220;dog&#8221; &#8594; /d/ /o/ /g/</div></div>
   </div>
   <div style="display:flex;flex-direction:column;gap:12px">
@@ -423,8 +437,9 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 <!-- SLP -->
 <div class="slp-only">
 <div class="diagram-wrap" style="margin-bottom:20px">
-<p style="font-size:11px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">Developmental skill timeline (approximate)</p>
-<svg viewBox="0 0 660 278" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+<p style="font-size:11px;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px">Developmental skill timeline (approximate)</p>
+<p style="font-size:10px;color:var(--ink3);margin-bottom:12px">Continuum of complexity after Chard &amp; Dickson (1999); age norms from Dodd &amp; Gillon (2001) PIPA data. Skills overlap &#8212; these are phases, not discrete stages.</p>
+<svg viewBox="0 0 660 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
 
   <!-- grid lines -->
   <line x1="228" y1="10" x2="228" y2="186" stroke="#E4E0D8" stroke-width="1" stroke-dasharray="3,4"/>
@@ -498,24 +513,68 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
   <rect x="424" y="164" width="196" height="14" rx="4" fill="#F2C55C" opacity="0.15"/>
   <rect x="424" y="164" width="196" height="14" rx="4" fill="none" stroke="#F2C55C" stroke-width="1.5" stroke-dasharray="4,3"/>
 
-  <!-- LEGEND ROW 1: colours -->
-  <rect x="130" y="215" width="22" height="10" rx="2" fill="#7DD4BC"/>
-  <text x="156" y="224" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">PA / phonemic awareness</text>
-  <rect x="310" y="215" width="22" height="10" rx="2" fill="#8FC6EF"/>
-  <text x="336" y="224" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Isolation / blending</text>
-  <rect x="460" y="215" width="22" height="10" rx="2" fill="#F2C55C"/>
-  <text x="486" y="224" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Manipulation tasks</text>
+  <!-- LEGEND ROW 1a: heading + first 2 colour swatches -->
+  <text x="130" y="212" font-family="DM Sans,sans-serif" font-size="8" font-weight="700" fill="#8A8780" letter-spacing="0.08em">COLOUR = SKILL TYPE</text>
+  <rect x="130" y="218" width="12" height="10" rx="2" fill="#C4BBF7"/>
+  <text x="146" y="227" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Rhyme &amp; alliteration</text>
+  <rect x="280" y="218" width="12" height="10" rx="2" fill="#7DD4BC"/>
+  <text x="296" y="227" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Syllable &amp; segmentation</text>
 
-  <!-- LEGEND ROW 2: solid/faded split + dotted -->
-  <rect x="130" y="232" width="11" height="10" rx="2" fill="#7DD4BC"/>
-  <rect x="141" y="232" width="11" height="10" rx="2" fill="#7DD4BC" opacity="0.35"/>
-  <text x="156" y="241" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Solid = UK norm &#183; Faded = AU norm (where norms differ)</text>
+  <!-- LEGEND ROW 1b: remaining 2 colour swatches -->
+  <rect x="130" y="232" width="12" height="10" rx="2" fill="#8FC6EF"/>
+  <text x="146" y="241" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Phoneme isolation &amp; blending</text>
+  <rect x="340" y="232" width="12" height="10" rx="2" fill="#F2C55C"/>
+  <text x="356" y="241" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Manipulation tasks (deletion, substitution)</text>
 
-  <rect x="130" y="249" width="22" height="10" rx="2" fill="none" stroke="#8FC6EF" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="156" y="258" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Dotted outline = developmental estimate only; no PIPA normative data available for this skill</text>
+  <!-- LEGEND ROW 2: border type -->
+  <text x="130" y="257" font-family="DM Sans,sans-serif" font-size="8" font-weight="700" fill="#8A8780" letter-spacing="0.08em">BORDER = DATA SOURCE</text>
+  <rect x="130" y="263" width="12" height="10" rx="2" fill="#7DD4BC"/>
+  <text x="146" y="272" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Solid fill = PIPA normed data (Dodd &amp; Gillon 2001)</text>
+  <rect x="400" y="263" width="12" height="10" rx="2" fill="#8FC6EF" opacity="0.15"/>
+  <rect x="400" y="263" width="12" height="10" rx="2" fill="none" stroke="#8A8780" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="416" y="272" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Dotted = estimate only (no PIPA norm)</text>
+
+  <!-- LEGEND ROW 3: shade / population -->
+  <text x="130" y="288" font-family="DM Sans,sans-serif" font-size="8" font-weight="700" fill="#8A8780" letter-spacing="0.08em">SHADE = POPULATION</text>
+  <rect x="130" y="294" width="12" height="10" rx="2" fill="#7DD4BC"/>
+  <text x="146" y="303" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Solid = UK norm</text>
+  <line x1="228" y1="299" x2="240" y2="299" stroke="#7DD4BC" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <rect x="244" y="294" width="12" height="10" rx="2" fill="#7DD4BC" opacity="0.35"/>
+  <text x="260" y="303" font-family="DM Sans,sans-serif" font-size="9" fill="#6A6860">Faded = AU norm (typically 6–12 months later)</text>
 </svg>
 <p class="diagram-caption">Bars show approximate age of skill establishment (50% of children scoring &#8805;50%). Dark = UK norms, light extension = AU norms. Source: Dodd &amp; Gillon (2001) Table 2.</p>
 </div>
+
+<div class="card" style="margin-bottom:16px;border-top:4px solid var(--pa)">
+  <div style="font-size:12px;font-weight:600;color:var(--ink);margin-bottom:12px">How to read this chart</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+    <div style="background:var(--pa-l);border-radius:8px;padding:12px">
+      <div style="font-size:10px;font-weight:700;color:var(--pa);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">Colour = skill type</div>
+      <div style="font-size:11px;color:var(--ink2);line-height:1.8">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#C4BBF7;margin-right:6px;vertical-align:middle"></span>Purple — Rhyme &amp; alliteration<br>
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#7DD4BC;margin-right:6px;vertical-align:middle"></span>Teal — Syllable &amp; segmentation<br>
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#8FC6EF;margin-right:6px;vertical-align:middle"></span>Blue — Phoneme isolation &amp; blending<br>
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#F2C55C;margin-right:6px;vertical-align:middle"></span>Yellow — Manipulation (deletion, substitution)
+      </div>
+    </div>
+    <div style="background:var(--ph-l);border-radius:8px;padding:12px">
+      <div style="font-size:10px;font-weight:700;color:var(--ph);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">Border &amp; shade = data type &amp; population</div>
+      <div style="font-size:11px;color:var(--ink2);line-height:1.8">
+        <strong>Solid fill</strong> = PIPA normed data (Dodd &amp; Gillon 2001)<br>
+        <strong>Dotted border</strong> = developmental estimate only — not from PIPA; use as a rough guide, not a diagnostic cut-off<br>
+        <strong>Dark shade</strong> = UK norm &nbsp;·&nbsp; <strong>Faded shade</strong> = AU norm
+      </div>
+    </div>
+  </div>
+  <div style="background:#F7F4EF;border-radius:8px;padding:12px;font-size:11px;color:var(--ink2);line-height:1.85">
+    <strong style="color:var(--ink);display:block;margin-bottom:6px">What this chart is telling you</strong>
+    <strong>1. AU norms lag UK norms across almost every skill</strong> — the gap is biggest at phoneme segmentation (AU ~6;6–6;11 vs UK ~5;6–5;11). Always use the AU column when interpreting results for Australian children.<br>
+    <strong>2. Syllable awareness is the exception</strong> — both populations reach it at the same age (4;6–4;11). It's the only skill with no AU/UK divergence.<br>
+    <strong>3. Blending, deletion and substitution have no PIPA norm</strong> (dotted borders) — treat those age estimates as approximate benchmarks from the broader literature, not norm-referenced reference points.<br>
+    <strong>4. Yellow = the highest clinical priority for literacy</strong> — manipulation tasks (deletion, substitution) emerge last but predict reading ability most strongly. A child who can blend and segment but not manipulate still has meaningful skill gaps worth targeting.
+  </div>
+</div>
+
 <div class="callout c-warn" style="margin-bottom:20px"><strong>&#9888; For Australian clinicians:</strong> AU and UK norms diverge from rhyme awareness onwards. Australian children establish phoneme segmentation at 6;6&#8211;6;11 &#8212; a full year after UK children (5;6&#8211;5;11). Always apply the Australian column.</div>
 <div class="callout c-mute" style="margin-bottom:24px;font-style:italic">These are overlapping developmental phases, not discrete sequential steps. Skills at higher levels can emerge before lower-level skills are fully consolidated.</div>
 <div class="card">
@@ -523,7 +582,7 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
   <div class="flow-step"><div class="flow-num fn-pa">1</div><div class="flow-content"><div class="flow-title">Rhyme detection &amp; production</div><div class="norm-pills"><span class="np-uk">UK: 4;6&#8211;4;11</span><span class="np-au">AU: 5;0&#8211;5;5</span></div><div class="flow-body">Detection (passive) precedes production (active). Rhyme sensitivity from ~24&#8211;30 months; formal tasks reliable from ~age 4. Knowledge of nursery rhymes at 3 predicts later phoneme awareness (Bryant et al. 1989).</div><div class="src-note">Dodd &amp; Gillon (2001) Table 2; PIPA normative data</div></div></div>
   <div class="flow-step"><div class="flow-num fn-pa">2</div><div class="flow-content"><div class="flow-title">Syllable awareness</div><div class="norm-pills"><span class="np-uk">UK: 4;6&#8211;4;11</span><span class="np-au">AU: 4;6&#8211;4;11</span></div><div class="flow-body">Norms identical across AU and UK. &#8220;but-ter-fly&#8221; = 3 syllables. Compound word deletion easier: &#8220;say &#8216;football&#8217; without &#8216;foot&#8217;&#8221;.</div><div class="src-note">Dodd &amp; Gillon (2001) Table 2</div></div></div>
   <div class="flow-step"><div class="flow-num fn-pa">3</div><div class="flow-content"><div class="flow-title">Alliteration awareness</div><div class="norm-pills"><span class="np-uk">UK: 5;0&#8211;5;5</span><span class="np-au">AU: 5;0&#8211;5;5</span></div><div class="flow-body">Recognition that words share the same initial sound. Same norm both populations. &#8220;Ball, bat, bin &#8212; they all start with /b/.&#8221;</div><div class="src-note">Dodd &amp; Gillon (2001) Table 2</div></div></div>
-  <div class="flow-step"><div class="flow-num fn-pa">4</div><div class="flow-content"><div class="flow-title">Onset&#8211;rime awareness <span class="tag t-pa">~age 4&#8211;5</span></div><div class="flow-body">Splitting &#8220;cat&#8221; &#8594; onset /k/ + rime /&#230;t/. Predates full phoneme-level awareness. Phoneme-level skills remain the strongest reading predictors.</div></div></div>
+  <div class="flow-step"><div class="flow-num fn-pa">4</div><div class="flow-content"><div class="flow-title">Onset&#8211;rime awareness <span class="tag t-pa">~age 4&#8211;5 (est.)</span></div><div class="flow-body">Splitting &#8220;cat&#8221; &#8594; onset /k/ + rime /&#230;t/. Predates full phoneme-level awareness. Phoneme-level skills remain the strongest reading predictors. <strong>Note:</strong> The PIPA does not include an onset&#8211;rime subtest &#8212; this age estimate is drawn from general developmental literature (Anthony et al. 2003; Goswami 2000), not PIPA normative data.</div></div></div>
   <div class="phon-entry">
     <div class="phon-entry-label">&#8595; Entering phonemic awareness territory</div>
     <div class="flow-step"><div class="flow-num fn-ph">5</div><div class="flow-content"><div class="flow-title">Phoneme isolation</div><div class="norm-pills"><span class="np-uk">UK: 4;6&#8211;4;11</span><span class="np-au">AU: 5;0&#8211;5;5</span></div><div class="flow-body">&#8220;What&#8217;s the first sound in &#8216;sun&#8217;?&#8221; &#8594; /s/. Entry point to phonemic awareness work. AU norm ~6&#8211;7 months later &#8212; attributable to later school entry.</div><div class="src-note">Dodd &amp; Gillon (2001) Table 2; PIPA normative data</div></div></div>
@@ -536,8 +595,6 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 </div>
 <div class="callout c-ph" style="margin-top:12px"><strong>Clinical tip:</strong> Blending is generally easier &#8212; a useful starting point &#8212; but integrated blending and segmentation produces the greatest literacy benefit (NRP 2000). When a child can do syllable tasks but fails phoneme tasks, begin with phoneme isolation at word-initial position.</div>
 </div>
-
-<!-- PARENT -->
 <div class="parent-only">
 <div class="parent-banner"><div class="pb-icon">&#128197;</div><div><div class="pb-title">When do children learn these skills?</div><div class="pb-body">These skills develop gradually over the preschool and early school years. Every child is different, but there are general milestones to watch for. In Australia, children start school at age 5 &#8212; one year later than the UK &#8212; so Australian milestones are slightly later too.</div></div></div>
 <div class="callout c-warn" style="margin-bottom:10px"><strong>Note for Australian families:</strong> The ages below reflect what is typical for Australian children. You may see slightly earlier ages in American or British resources &#8212; this reflects different school starting ages, not a problem with your child.</div>
@@ -567,7 +624,7 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 <div class="slp-only">
 <p style="color:var(--ink2);font-size:13px;margin-bottom:20px;max-width:680px;line-height:1.7">These terms are frequently conflated in clinical and educational settings. Here is how they differ &#8212; and how they interact.</p>
 <div class="g3" style="margin-bottom:20px">
-  <div class="cc pa"><div class="cc-title" style="color:var(--pa)">Phonological / Phonemic Awareness</div><div class="cc-sub">Ears only &#8212; no letters</div><p class="cc-body">Definitionally auditory &#8212; no print. The prerequisite for phonics. Integrating letters once letter learning is underway strengthens both skills (Ehri et al. 2001; Boyer &amp; Ehri 2011).</p><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Detecting and producing rhymes</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Clapping and counting syllables</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Segmenting phonemes in spoken words</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Blending spoken sounds into words</div></div></div>
+  <div class="cc pa"><div class="cc-title" style="color:var(--pa)">Phonological / Phonemic Awareness</div><div class="cc-sub">Ears only &#8212; no letters</div><p class="cc-body">Definitionally auditory &#8212; no print. The continuum runs from least complex (rhyming, alliteration, sentence segmentation) through syllables and onset&#8211;rime to phoneme-level tasks (Chard &amp; Dickson, 1999). Phonemic awareness is the phoneme-level subset. Integrating letters once letter learning is underway strengthens both skills (Ehri et al. 2001; Boyer &amp; Ehri 2011).</p><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Rhyming and alliteration (least complex)</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Clapping and counting syllables</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Onset&#8211;rime blending and segmentation</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Segmenting phonemes in spoken words</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pa-m)"></div><div class="skill-text dim">Blending spoken sounds into words</div></div></div>
   <div class="cc ls"><div class="cc-title" style="color:var(--ls)">Letter&#8211;Sound Knowledge</div><div class="cc-sub">Visual + auditory pairing</div><p class="cc-body">Knowing /b/ is represented by &#8220;b&#8221;. Sub-skill of phonics. Distinct from phonological awareness. Combined instruction with PA produces better outcomes than either alone (Ehri et al. 2001, NRP).</p><div class="skill-row"><div class="skill-dot" style="background:var(--ls-m)"></div><div class="skill-text dim">Alphabet knowledge</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--ls-m)"></div><div class="skill-text dim">Letter naming</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--ls-m)"></div><div class="skill-text dim">Letter&#8211;sound pairing</div></div></div>
   <div class="cc pi"><div class="cc-title" style="color:var(--pi)">Phonics</div><div class="cc-sub">Print + sound</div><p class="cc-body">Applying grapheme&#8211;phoneme correspondences to read and spell. Requires phonemic awareness AND letter&#8211;sound knowledge working together.</p><div class="skill-row"><div class="skill-dot" style="background:var(--pi-m)"></div><div class="skill-text dim">Decoding &#8220;sh-i-p&#8221; using letter knowledge</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pi-m)"></div><div class="skill-text dim">Encoding &#8220;ship&#8221; &#8594; s-h-i-p</div></div><div class="skill-row"><div class="skill-dot" style="background:var(--pi-m)"></div><div class="skill-text dim">Digraph &amp; blend rules (sh, ch, str)</div></div></div>
 </div>
@@ -605,7 +662,6 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 
 <!-- SLP -->
 <div class="slp-only">
-<p style="color:var(--ink2);font-size:13px;margin-bottom:20px;max-width:680px;line-height:1.7">All tool descriptions verified against primary sources. Norms, age ranges, and authors confirmed.</p>
 <div class="sec-label">Assessment pathway</div>
 <div class="diagram-wrap" style="padding:28px 24px">
 <svg viewBox="0 0 560 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
@@ -639,11 +695,11 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 </svg>
 </div>
 <div class="sec-label">Standardised tools</div>
-<div class="tool-card" style="border-top:4px solid var(--pa)"><div class="tool-name">PIPA &#8212; Preschool and Primary Inventory of Phonological Awareness</div><div><span class="tag t-gray">Dodd, Crosbie, McIntosh, Teitzel &amp; Ozanne (2000)</span><span class="tag t-pa">Ages 3;0&#8211;6;11</span><span class="tag t-ph">UK &amp; AU norms</span></div><div class="tool-body">Six subtests: Syllable Segmentation, Rhyme Awareness, Alliteration Awareness, Phoneme Isolation, Phoneme Segmentation, and Letter Knowledge. Separate AU and UK normative data &#8212; AU norms reflect later school entry. Approx. 20 minutes. <strong>Primary source for age norms in this reference</strong> (Dodd &amp; Gillon 2001, Table 2).</div></div>
-<div class="tool-card" style="border-top:4px solid var(--pi)"><div class="tool-name">CTOPP-2 &#8212; Comprehensive Test of Phonological Processing, 2nd Edition</div><div><span class="tag t-gray">Wagner, Torgesen &amp; Rashotte (2013)</span><span class="tag t-pa">Ages 4;0&#8211;24;11</span><span class="tag t-pi">US norms</span></div><div class="tool-body">Norm-referenced. Assesses phonological awareness, phonological memory, and rapid naming. Two age-specific versions: 4&#8211;6 and 7&#8211;24 years. Twelve subtests including Elision, Blending Words, and Phoneme Isolation. <em>US norms &#8212; interpret with caution in Australian contexts.</em></div></div>
-<div class="tool-card" style="border-top:4px solid var(--ph)"><div class="tool-name">SPAT-R &#8212; Sutherland Phonological Awareness Test &#8211; Revised</div><div><span class="tag t-gray">Neilson (2003)</span><span class="tag t-ph">Australian norms</span><span class="tag t-pa">Years 1&#8211;4</span></div><div class="tool-body">Grade-referenced Australian norms (not age-based). Covers syllable awareness, rhyming, phoneme identification and manipulation, with brief nonword reading and spelling tasks. Approx. 15 minutes. Widely used by Australian SLPs. Norms from 2001 Australian standardisation sample.</div><div class="callout c-warn" style="margin-top:8px">The SPAT-R&#8217;s primary clinical value is the <strong>qualitative diagnostic profile</strong> it generates &#8212; the pattern of skills across subtests &#8212; alongside normative comparison. Standardisation data collected Term 4, 2001.</div></div>
-<div class="tool-card" style="border-top:4px solid var(--ls-m)"><div class="tool-name">PAST &#8212; Phonological Awareness Screening Test</div><div><span class="tag t-gray">Kilpatrick (2003, updated 2018)</span><span class="tag t-warn">Criterion-referenced</span></div><div class="tool-body">Available free at thepasttest.com. Criterion-referenced &#8212; assesses against a defined standard rather than comparing to age peers. Assesses syllable, onset&#8211;rime, and phoneme levels with a <strong>timing component</strong> to measure automaticity. Provides corrective feedback on every item. Emphasises manipulation tasks (deletion, substitution). US context. Complements SPAT-R rather than replacing it.</div></div>
-<div class="tool-card" style="border-top:4px solid #C0BBB0"><div class="tool-name">PAT-2:NU &#8212; Phonological Awareness Test 2, Normative Update</div><div><span class="tag t-gray">Robertson &amp; Salter (2018)</span><span class="tag t-pi">US norms</span></div><div class="tool-body">Norm-referenced. Assesses phonological awareness, phoneme&#8211;grapheme correspondence, and phonemic decoding. US norms &#8212; less directly applicable in Australian contexts than SPAT-R, but a valid supplementary tool.</div></div>
+<div class="tool-card" style="border-top:4px solid var(--pa)"><div class="tool-name">PIPA &#8212; Preschool and Primary Inventory of Phonological Awareness</div><div style="margin-bottom:6px"><span class="tag-meta">Dodd, Crosbie, McIntosh, Teitzel &amp; Ozanne (2000)</span><span class="tag-meta">Ages 3;0&#8211;6;11</span><span class="tag-meta">UK &amp; AU norms</span></div><div class="tool-body">Six subtests: Syllable Segmentation, Rhyme Awareness, Alliteration Awareness, Phoneme Isolation, Phoneme Segmentation, and Letter Knowledge. Separate AU and UK normative data &#8212; AU norms reflect later school entry. Approx. 20 minutes. <strong>Primary source for age norms in this reference</strong> (Dodd &amp; Gillon 2001, Table 2).</div></div>
+<div class="tool-card" style="border-top:4px solid var(--pi)"><div class="tool-name">CTOPP-2 &#8212; Comprehensive Test of Phonological Processing, 2nd Edition</div><div style="margin-bottom:6px"><span class="tag-meta">Wagner, Torgesen &amp; Rashotte (2013)</span><span class="tag-meta">Ages 4;0&#8211;24;11</span><span class="tag-meta">US norms</span></div><div class="tool-body">Norm-referenced. Assesses phonological awareness, phonological memory, and rapid naming. Two age-specific versions: 4&#8211;6 and 7&#8211;24 years. Twelve subtests including Elision, Blending Words, and Phoneme Isolation. <em>US norms &#8212; interpret with caution in Australian contexts.</em></div></div>
+<div class="tool-card" style="border-top:4px solid var(--ph)"><div class="tool-name">SPAT-R &#8212; Sutherland Phonological Awareness Test &#8211; Revised</div><div style="margin-bottom:6px"><span class="tag-meta">Neilson (2003)</span><span class="tag-meta">Australian norms</span><span class="tag-meta">Years 1&#8211;4</span></div><div class="tool-body">Grade-referenced Australian norms (not age-based). Covers syllable awareness, rhyming, phoneme identification and manipulation, with brief nonword reading and spelling tasks. Approx. 15 minutes. Widely used by Australian SLPs. Norms from 2001 Australian standardisation sample.</div><div class="callout c-warn" style="margin-top:8px">The SPAT-R&#8217;s primary clinical value is the <strong>qualitative diagnostic profile</strong> it generates &#8212; the pattern of skills across subtests &#8212; alongside normative comparison. Standardisation data collected Term 4, 2001.</div></div>
+<div class="tool-card" style="border-top:4px solid var(--ls-m)"><div class="tool-name">PAST &#8212; Phonological Awareness Screening Test</div><div style="margin-bottom:6px"><span class="tag-meta">Kilpatrick (2003, updated 2018)</span><span class="tag-meta">Criterion-referenced</span></div><div class="tool-body">Available free at thepasttest.com. Criterion-referenced &#8212; assesses against a defined standard rather than comparing to age peers. Assesses syllable, onset&#8211;rime, and phoneme levels with a <strong>timing component</strong> to measure automaticity. Provides corrective feedback on every item. Emphasises manipulation tasks (deletion, substitution). US context. Complements SPAT-R rather than replacing it.</div></div>
+<div class="tool-card" style="border-top:4px solid #C0BBB0"><div class="tool-name">PAT-2:NU &#8212; Phonological Awareness Test 2, Normative Update</div><div style="margin-bottom:6px"><span class="tag-meta">Robertson &amp; Salter (2018)</span><span class="tag-meta">US norms</span></div><div class="tool-body">Norm-referenced. Assesses phonological awareness, phoneme&#8211;grapheme correspondence, and phonemic decoding. US norms &#8212; less directly applicable in Australian contexts than SPAT-R, but a valid supplementary tool.</div></div>
 <div class="callout c-info" style="margin-top:12px"><strong>PAST vs SPAT-R:</strong> Complementary purposes. SPAT-R provides a qualitative Australian diagnostic profile with grade-referenced norms. PAST provides a criterion-referenced screen emphasising automaticity and manipulation tasks. Neither replaces the other.</div>
 </div>
 
@@ -687,10 +743,10 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 <p style="color:var(--ink2);font-size:13px;margin-bottom:20px;max-width:680px;line-height:1.7">A practical guide to intervention target selection, sequencing, and SLP scope considerations.</p>
 <div class="sec-label">Intervention target decision guide</div>
 <div class="g2" style="margin-bottom:20px">
-  <div class="int-card" style="border-top:4px solid var(--pa)"><h4 style="color:var(--pa)">PA &#8212; Pre-phoneme level</h4><p>Start here for preschool/prep, or if child fails syllable or rhyme tasks. Do not linger &#8212; phoneme-level work drives literacy outcomes most directly.</p><ul><li>Rhyme detection before rhyme generation</li><li>Syllable clapping, counting, blending, deleting</li><li>Compound word manipulation as entry point (&#8220;football&#8221; &#8594; &#8220;foot&#8221;)</li></ul></div>
+  <div class="int-card" style="border-top:4px solid var(--pa)"><h4 style="color:var(--pa)">PA &#8212; Sub-phoneme levels</h4><p>Start here for preschool/prep, or if the child fails syllable, rhyme or alliteration tasks. These are the <em>least complex</em> end of the PA continuum (Chard &amp; Dickson, 1999) &#8212; important foundations, but don&#8217;t linger. Phoneme-level work drives literacy outcomes most directly.</p><ul><li>Rhyme detection before rhyme production (detection is passive, production is active)</li><li>Alliteration awareness &#8212; first-sound recognition across words</li><li>Syllable clapping, counting, blending, deleting</li><li>Compound word manipulation as entry to deletion (&#8220;football&#8221; &#8594; &#8220;foot&#8221;)</li><li>Onset&#8211;rime blending and segmentation as bridge to phoneme level</li></ul></div>
   <div class="int-card" style="border-top:4px solid var(--ph)"><h4 style="color:var(--ph)">Phonemic awareness</h4><p>Sequence: isolation &#8594; identity/categorisation &#8594; blending + segmentation (integrated) &#8594; deletion &#8594; manipulation.</p><ul><li>Minimal pair tasks (bat/pat, cup/pup)</li><li>Elkonin / sound boxes for segmentation</li><li>Integrated blending + segmentation &#8212; not one then the other</li><li>Progress to deletion and substitution for stronger reading gains</li></ul></div>
   <div class="int-card" style="border-top:4px solid var(--ls-m)"><h4 style="color:var(--ls)">Letter&#8211;sound knowledge</h4><p>Teach alongside phonemic awareness once letter learning is underway. Combined instruction more effective than either alone (Ehri et al. 2001, NRP).</p><ul><li>Explicit letter name + sound pairing</li><li>Sound sorts, initial sound picture matching</li><li>Letter tracing with simultaneous vocalisation</li></ul></div>
-  <div class="int-card" style="border-top:4px solid var(--pi)"><h4 style="color:var(--pi)">Phonics (school age)</h4><p>Use connected phonation (&#8220;mmmaaannn&#8221; not &#8220;m&#8211;a&#8211;n&#8221;) &#8212; more effective for CVC decoding (Gonzalez-Frey &amp; Ehri 2020). SLPs typically address the phonological foundation; explicit phonics led by educators.</p><ul><li>Decodable texts matched to current letter knowledge</li><li>Explicit GPC instruction + blending practice</li><li>Word-building with tiles / letter manipulatives</li></ul></div>
+  <div class="int-card" style="border-top:4px solid var(--pi)"><h4 style="color:var(--pi)">Phonics (school age)</h4><p>Use connected phonation (&#8220;mmmaaannn&#8221; not &#8220;m&#8211;a&#8211;n&#8221;) &#8212; more effective for CVC decoding (Gonzalez-Frey &amp; Ehri 2020). SLPs are well-placed to deliver phonics-embedded intervention, particularly for children with SSD, DLD, or dyslexia (SPA, 2024). Collaboration with classroom teachers at the Tier 1 level remains important.</p><ul><li>Decodable texts matched to current letter knowledge</li><li>Explicit GPC instruction + blending practice</li><li>Word-building with tiles / letter manipulatives</li></ul></div>
 </div>
 <hr class="div">
 <div class="sec-label">Evidence base for sequencing</div>
@@ -701,7 +757,7 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
   <div class="flow-step"><div class="flow-num fn-ph">&#10003;</div><div class="flow-content"><div class="flow-title">Resolving SSD without targeting PA</div><div class="flow-body">Has little impact on literacy outcomes. PA intervention group in Gillon (2000) outperformed the speech-only group on reading and spelling despite similar gains in speech production.</div></div></div>
   <div class="flow-step" style="border-bottom:none"><div class="flow-num fn-ph">&#10003;</div><div class="flow-content"><div class="flow-title">Rhyme and syllable instruction alone</div><div class="flow-body">Without progressing to phoneme-level work does not directly improve reading acquisition (NRP 2000). Target phoneme level as priority for literacy outcomes.</div></div></div>
 </div>
-<div class="callout c-mute" style="margin-top:12px"><strong>SLP scope note:</strong> SLPs hold expertise in phonological and phonemic awareness and may address letter&#8211;sound knowledge as it relates to phonological processing. Phonics instruction is typically led by classroom teachers or literacy specialists, though SLPs in school settings may provide phonics-embedded intervention &#8212; particularly for children with SSD, DLD, or dyslexia. Close collaboration with educators is essential at the phonics stage.</div>
+<div class="callout c-mute" style="margin-top:12px"><strong>SLP scope note (SPA 2024):</strong> Speech pathologists assess, diagnose, and intervene across the full literacy continuum &#8212; including phonological awareness, phonemic awareness, letter&#8211;sound knowledge, and phonics-embedded intervention. This is explicit in SPA&#8217;s 2024 Clinical Guidelines and position statements. SLPs in school settings are well-placed to deliver phonics-embedded intervention, particularly for children with SSD, DLD, or dyslexia &#8212; and SPA has advocated for SLP involvement in systematic phonics-based approaches nationally. Close collaboration with classroom teachers and literacy specialists remains essential, particularly for Tier 1 classroom instruction, but collaborative practice does not limit SLP scope.</div>
 </div>
 
 <!-- PARENT -->
@@ -720,8 +776,63 @@ hr.div{border:none;border-top:1px solid var(--line);margin:24px 0}
 </div><!-- end .main -->
 
 <div class="footer">
-  <span class="slp-only"><strong>Primary sources:</strong> Dodd &amp; Gillon (2001), <em>Advances in Speech-Language Pathology</em> 3(2):139&#8211;147 [age norms from Table 2, PIPA normative data] &#183; Dodd, Crosbie, McIntosh, Teitzel &amp; Ozanne (2000), PIPA &#183; Gonzalez-Frey &amp; Ehri (2020), <em>Scientific Studies of Reading</em> &#183; Ehri et al. (2001), <em>Reading Research Quarterly</em> 36(3):250&#8211;287 [NRP meta-analysis] &#183; Gillon (2000), <em>LSHSS</em> 31:126&#8211;141 &#183; Kilpatrick (2012, 2015) &#183; Catts et al. (2001) [see also] &#183; NRP (2000) &#183; SPAT-R: Neilson (2003) &#183; CTOPP-2: Wagner, Torgesen &amp; Rashotte (2013)<br><br><strong>Note on Australian norms:</strong> All Australian established-skill ages sourced from Dodd &amp; Gillon (2001) Table 2, PIPA normative data from both Australian and British populations. The difference is attributed to later school entry age in Australia (age 5 vs age 4 in Britain).</span>
+  <span class="slp-only">
+    <details class="src-details">
+      <summary class="src-summary">
+        <svg class="src-chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 3L7.5 6L4.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Primary sources &amp; methodological notes
+      </summary>
+      <div class="src-body">
+
+        <div class="src-col">
+          <div class="src-group">
+            <div class="src-group-label">Developmental sequence &amp; PA continuum</div>
+            <div class="src-item">Chard, D.J. &amp; Dickson, S.V. (1999). Phonological awareness: Instructional and assessment guidelines. <em>Intervention in School and Clinic</em>, 34(5), 261&#8211;270.</div>
+            <div class="src-item">Anthony, J.L., et al. (2003). Preschoolers&#8217; development of onset&#8211;rime sensitivity. <em>[onset&#8211;rime developmental estimate — general developmental literature; not from PIPA normative data]</em></div>
+          </div>
+          <div class="src-group">
+            <div class="src-group-label">Phonemic awareness &amp; literacy outcomes</div>
+            <div class="src-item">National Reading Panel (2000). <em>Teaching children to read: An evidence-based assessment.</em> NICHD.</div>
+            <div class="src-item">Ehri, L.C., et al. (2001). Phonemic awareness instruction helps children learn to read: Evidence from the National Reading Panel&#8217;s meta-analysis. <em>Reading Research Quarterly</em>, 36(3), 250&#8211;287.</div>
+            <div class="src-item">Boyer, N. &amp; Ehri, L.C. (2011). Contribution of phonemic segmentation instruction with letters and pictures to word reading and spelling. <em>Scientific Studies of Reading</em>, 15(5), 440&#8211;470.</div>
+            <div class="src-item">Gillon, G.T. (2000). The efficacy of phonological awareness intervention for children with spoken language impairment. <em>Language, Speech, and Hearing Services in Schools</em>, 31, 126&#8211;141.</div>
+            <div class="src-item">Kilpatrick, D.A. (2012). Phonological segmentation assessment is not enough: A comparison of three phonological awareness tests with first and second graders. <em>Canadian Journal of School Psychology</em>, 27(2), 150&#8211;165.</div>
+            <div class="src-item">Kilpatrick, D.A. (2015). <em>Equipped for Reading Success.</em> Casey &amp; Kirsch Publishers. <em>[professional resource — not a peer-reviewed study]</em></div>
+          </div>
+          <div class="src-group">
+            <div class="src-group-label">SLP scope &amp; clinical guidelines</div>
+            <div class="src-item">Speech Pathology Australia (2024). <em>Clinical Guidelines: Literacy.</em> SPA.</div>
+          </div>
+        </div>
+
+        <div class="src-col">
+          <div class="src-group">
+            <div class="src-group-label">Age norms (PIPA)</div>
+            <div class="src-item">Dodd, B., Crosbie, S., McIntosh, B., Teitzel, T., &amp; Ozanne, A. (2000). <em>Preschool and Primary Inventory of Phonological Awareness (PIPA)</em>. Psychological Corporation.</div>
+            <div class="src-item">Dodd, B. &amp; Gillon, G. (2001). Exploring the relationship between phonological awareness, speech impairment and literacy. <em>Advances in Speech-Language Pathology</em>, 3(2), 139&#8211;147. <em>[Table 2 — primary source for all AU and UK age norms in this resource]</em></div>
+            <div class="src-item src-note-inline">AU norms reflect later school entry (age 5) compared to UK (age 4). All established-skill ages use the Australian column unless stated otherwise.</div>
+          </div>
+          <div class="src-group">
+            <div class="src-group-label">Phonics &amp; connected phonation</div>
+            <div class="src-item">Gonzalez-Frey, S.M. &amp; Ehri, L.C. (2020). Connected phonation is more effective than segmented phonation for teaching beginning readers to decode unfamiliar words. <em>Scientific Studies of Reading</em>, 25(3), 272&#8211;285.</div>
+          </div>
+          <div class="src-group">
+            <div class="src-group-label">Assessment tools</div>
+            <div class="src-item">Neilson, R. (2003). <em>Sutherland Phonological Awareness Test &#8211; Revised (SPAT-R).</em> Neilson. <em>[Australian norms; standardisation data collected Term 4, 2001]</em></div>
+            <div class="src-item">Wagner, R.K., Torgesen, J.K., &amp; Rashotte, C.A. (2013). <em>Comprehensive Test of Phonological Processing, 2nd Edition (CTOPP-2).</em> Pro-Ed. <em>[US norms]</em></div>
+            <div class="src-item">Kilpatrick, D.A. (2003, updated 2018). <em>Phonological Awareness Screening Test (PAST).</em> <em>[criterion-referenced; available free at thepasttest.com]</em></div>
+            <div class="src-item">Robertson, C. &amp; Salter, W. (2018). <em>Phonological Awareness Test 2: Normative Update (PAT-2:NU).</em> Pro-Ed. <em>[US norms]</em></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+  </span>
   <span class="parent-only">This resource is designed for educational purposes and to support conversations with your child&#8217;s speech pathologist or school. It is not a substitute for professional assessment or advice. If you have concerns about your child&#8217;s speech, language, or literacy development, please speak with a qualified speech pathologist.</span>
+  <div style="padding-top:14px;margin-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+    <span style="font-size:11px;color:var(--ink2);font-weight:500">&#169; 2026 Gwen Gan. All rights reserved.</span>
+    <span style="font-size:10px;color:var(--ink3);text-align:right">Developed for the intended family and treating clinicians only. Not for redistribution.<br>Enquiries: <a href="mailto:gwengan96@gmail.com" style="color:var(--ink3);text-decoration:underline;text-underline-offset:2px">gwengan96@gmail.com</a></span>
+  </div>
 </div>
 
 <script>
